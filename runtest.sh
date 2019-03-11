@@ -1,14 +1,11 @@
 # bash shell
-echo "Enterusername:"
-read user
-echo "Enter password"
-read pass
-echo "Enter Full composition path:"
-read compname;
-echo "Enter time in minutes for test to run , enter only number"
-read stoptime;
-echo "Enter result name:"
-read resultname
+user=$1;
+pass=$2;
+compname=$3;
+stoptime=$4;
+resultname=$5;
+
+echo "The order of parameteris username/password/compositionpath/stoptimeinmins/resultname"
 
 echo "The comp that is started is $compname";
 {binPATHscommand}/scommand  play url=http://{instanceURL}/concerto username=$user password=$pass name=$compname resultname=$resultname validation=Homepage/AverageResponseTime/100 file="consolefile.txt"
@@ -26,6 +23,9 @@ sleep $stoptime ;
 
 {binPATHscommand}/scommand  stop url=http://{instanceURL}/concerto username=$user password=$pass instanceid=$instanceid ;
 exit
+#echo "Test ran successfully" | mail -s "a subject" somename@somewhere.com
+
 fi
+#echo "Test aborted or failed" | mail -s "a subject" somename@somewhere.com
 echo "Due to failure comp might have aborted"
 echo " Double check if comp is stopped from GUI "
