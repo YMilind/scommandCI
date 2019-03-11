@@ -9,3 +9,5 @@ The order of parameteris username/password/compositionpath/stoptimeinmins/result
 Need help on extracting dashboard URL from the running test which can be sent as email to stakeholders
 
 It is just a basic flow and it can be modified and used  , Everyone is welcome to make it more useful and robust all suggesstions are welcome.
+
+The deleteResults can be encorporated as a jenkins job to make sure if you are using a internal hosted instance , it remains clean , by sceduling job to keep deleting results. eg- Everyresult that gets older than 200 days ...
