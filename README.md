@@ -7,7 +7,7 @@ https://learn.akamai.com/en-us/webhelp/cloudtest/cloudtest/GUID-6BAB6A54-1221-42
 
 for using it download scommand utility from Akamai CLOUDTEST soasta , it is only useful if you have licenced CLOUDTEST tool at your exposure.
 
-The order of parameteris username/password/compositionpath/stoptimeinmins/resultname
+The order of parameteris username/password/compositionpath/stoptimeinmins/resultname/NumberofVirtualusers
 
 Need help on extracting dashboard URL from the running test which can be sent as email to stakeholders
 
