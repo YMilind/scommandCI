@@ -1,4 +1,4 @@
-# scommandCI
+# scommandshell
 
 This script can be used to run the test without using the GUI of cloudtest soasta , it will be helpful to run tests in CI .The trackproperty can be used to get input for number of Vugen test below is the reference link that can be used to be able to use it.
 
