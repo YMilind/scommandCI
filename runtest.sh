@@ -4,11 +4,12 @@ pass=$2;
 compname=$3;
 stoptime=$4;
 resultname=$5;
+vusers=$6;
 
-echo "The order of parameteris username/password/compositionpath/stoptimeinmins/resultname"
+echo "The order of parameteris username/password/compositionpath/stoptimeinmins/resultname/NumberofVirtualusers"
 
 echo "The comp that is started is $compname";
-{binPATHscommand}/scommand  play url=http://{instanceURL}/concerto username=$user password=$pass name=$compname resultname=$resultname validation=Homepage/AverageResponseTime/100 file="consolefile.txt"
+{binPATHscommand}/scommand  play url=http://{instanceURL}/concerto username=$user password=$pass name=$compname customproperty="Band1/Track1/track1VuCount=$vusers" resultname=$resultname validation=Homepage/AverageResponseTime/100 file="consolefile.txt"
 
 instanceid=`cut -d , -f2 consolefile.txt | cut -d \' -f2 | cut -d T -f1 | tr -s "\n"`
 STRLENGTH=`echo -n $instanceid | wc -m`;
